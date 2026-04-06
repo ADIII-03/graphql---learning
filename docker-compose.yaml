@@ -1,0 +1,15 @@
+services:
+  postgres:
+    container_name: threads.db
+    image: postgres:15.3
+    environment:
+      POSTGRES_USER: threads
+      POSTGRES_PASSWORD: threads
+      POSTGRES_DB: graphql_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:        
