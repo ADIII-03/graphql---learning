@@ -7,4 +7,10 @@ export const userQuery = {
     const token = await UserService.getUserToken({ email, password });
     return token;
   },
+
+  getCurrentUser: async (_: any, __: any, context: any) => {
+    console.log(context.user);
+    return context.user;
+  },
+
 };

@@ -9,6 +9,7 @@ export const userTypeDefs = `#graphql
   extend type Query {
     hello: String 
     getUserToken(email: String!, password: String!): String
+    getCurrentUser: User
   }
 
   extend type Mutation {
